@@ -37,14 +37,14 @@ async def restart(client, m: Message):
     await loli.edit("**✅ تم اعاده تشغيل بوت القران**")
     os.execl(sys.executable, sys.executable, *sys.argv)
     quit()
-@Client.on_message(filters.user(SUDO_USERS) & filters.command(["اوامر","اوامر القران"], prefixes=f"{HNDLR}"))
+@Client.on_message(filters.user(SUDO_USERS) & filters.command(["الاوامر","اوامر القران"], prefixes=f"{HNDLR}"))
 @authorized_users_only
 async def help(client, m: Message):
     await m.delete()
     HELP = f"""
 <b>👋 اهلا {m.from_user.mention}!
 
-𝘰𝘳𝘥𝘦𝘳𝘴 Telethon Quran
+𝘰𝘳𝘥𝘦𝘳𝘴 Bot Quran
 ——————×—————
 
 ⧉ | لتشغيل صوتية في المكالمة أرسل ⇦ [ `{HNDLR}تشغيل  + اسم السورة + او الرابط من يوتيوب` ]
